@@ -4,18 +4,18 @@ using SmallBusinessTracker.Services;
 
 namespace SmallBusinessTracker.Controllers
 {
-    public class DashboardController : Controller
+    public class ReportsController : Controller
     {
         private readonly IDashboardService _dashboardService;
 
-        public DashboardController(IDashboardService dashboardService)
+        public ReportsController(IDashboardService dashboardService)
         {
             _dashboardService = dashboardService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var model = await _dashboardService.GetDashboardAsync();
+            var model = await _dashboardService.GetReportsAsync();
 
             return View(model);
         }

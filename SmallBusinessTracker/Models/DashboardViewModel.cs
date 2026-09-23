@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace SmallBusinessTracker.Models
@@ -12,8 +13,18 @@ namespace SmallBusinessTracker.Models
 
         public decimal TotalRevenue { get; set; }
 
+        public decimal TodayRevenue { get; set; }
+
+        public decimal ThisMonthRevenue { get; set; }
+
         public List<LowStockProductViewModel> LowStockProducts { get; set; }
             = new List<LowStockProductViewModel>();
+
+        public List<SalesReportViewModel> DailySales { get; set; }
+            = new List<SalesReportViewModel>();
+
+        public List<SalesReportViewModel> MonthlySales { get; set; }
+            = new List<SalesReportViewModel>();
     }
 
     public class LowStockProductViewModel
@@ -21,5 +32,14 @@ namespace SmallBusinessTracker.Models
         public string ProductName { get; set; }
 
         public int Quantity { get; set; }
+    }
+
+    public class SalesReportViewModel
+    {
+        public DateTime Date { get; set; }
+
+        public int NumberOfSales { get; set; }
+
+        public decimal Revenue { get; set; }
     }
 }
