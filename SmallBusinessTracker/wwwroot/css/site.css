@@ -69,3 +69,21 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.dashboard-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+
+.dashboard-section {
+    margin-bottom: 25px;
+}
+
+.dashboard-empty {
+    padding: 30px;
+    text-align: center;
+    color: #6c757d;
+}
